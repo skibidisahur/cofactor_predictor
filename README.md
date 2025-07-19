@@ -1,22 +1,17 @@
-This tool predicts ligand presence and identity for protein pockets using `fpocket`, ESM embeddings, and trained XGBoost models.
+# Ligand Binding Pocket Classifier
+
+This tool predicts ligand presence and identity for protein pockets using `fpocket`, ESM embeddings, and trained XGBoost models. It also supports inputting protein **sequences** directly using **ESMFold**.
 
 ## Usage
-1. Run esmfold:
+
+### Option 1: From structure
 ```bash
-   esmfold_from_sequence.py --sequence path/to/sequence --output pdb_id.pdb
-2. Run fpocket:
-```bash
-bash run_fpocket.sh path/to/your_structure.pdb
+python run_pipeline.py --input myprotein.pdb
 ```
 
-3. Extract features:
+### Option 2: From sequence
 ```bash
-python extract_features.py --pdb_id your_structure
-```
-
-4. Predict ligand binding:
-```bash
-python predict_ligand.py --features pockets_your_structure.csv
+python run_pipeline.py --input myprotein.fasta
 ```
 
 ## Outputs
