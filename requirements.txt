@@ -1,0 +1,8 @@
+biopython
+pandas
+numpy
+torch
+esm
+scikit-learn
+joblib
+fair-esm
